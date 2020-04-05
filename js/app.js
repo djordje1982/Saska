@@ -352,7 +352,7 @@ document.addEventListener('click', (e) => {
 
 /********* MAPA *************/
 
-const centarMape = [20.409192, 44.772022]
+const centarMape = [20.407693, 44.774803]
 const map = new ol.Map({
     target: 'map',
     layers: [
