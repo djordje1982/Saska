@@ -375,7 +375,7 @@ const map = new ol.Map({
 var marker = new ol.Feature({
     geometry: new ol.geom.Point(
         ol.proj.fromLonLat(centarMape)
-    ), // Cordinates of New York's Town Hall
+    ),
 });
 var vectorSource = new ol.source.Vector({
     features: [marker]
@@ -387,7 +387,7 @@ var markerVectorLayer = new ol.layer.Vector({
 marker.setStyle(new ol.style.Style({
     image: new ol.style.Icon(({
         crossOrigin: 'anonymous',
-        src: '../img/004-32.png'
+        src: './img/004-32.png'
     }))
 }));
 
