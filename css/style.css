@@ -584,6 +584,7 @@ html {
 #oblasti-container ol {
     font-size: 1.4rem;
     padding-left: 30px;
+    font-weight: 300;
 }
 
 #oblasti-container ol:last-of-type {
@@ -609,6 +610,10 @@ html {
     width: 80%;
     text-align: justify;
     color: var(--slova-logo);
+    font-weight: 300;
+}
+
+span {
     font-weight: 300;
 }
 
@@ -649,6 +654,11 @@ html {
 .tim1,
 .tim3 {
     grid-column: 1/2;
+}
+
+#linkedin {
+    height: 30px;
+    width: 30px;
 }
 
 .o-nama1,
