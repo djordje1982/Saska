@@ -23,10 +23,11 @@ window.onload = (event) => {
     krivicnoTekst.style.opacity = '0'
 
 
+
 };
 
 const output = document.querySelector("#poruke");
-
+const mapa = document.getElementById('map')
 const poruka = [
     'Qui tacet consentire non videtur<br>– Ko ćuti ne saglašava se.',
     'Error (ignorantia) iuris nocet, facti non nocet (Paulus – D. 22, 6, 9, pr.)<br>– Zabluda o pravu (neznanje prava) škodi, a zabluda o činjenicama ne škodi.',
@@ -129,6 +130,8 @@ function vrtiPoruku() {
 
 setInterval(vrtiPoruku, 9000)
 
+const refres = document.getElementById('refres');
+const refres1 = document.getElementById('thankyou_message');
 
 
 
@@ -349,6 +352,115 @@ document.addEventListener('click', (e) => {
     }
 
 })
+
+/*********** KONTAKT ***********/
+
+const formIme = document.getElementById('name')
+const formEmail = document.getElementById('email')
+const formPoruka = document.getElementById('message')
+
+const labelIme = document.getElementById('labelIme')
+const labelEmail = document.getElementById('labelEmail')
+const labelPoruka = document.getElementById('labelPoruka')
+
+const formular = document.getElementById('formular')
+
+formIme.addEventListener('focus', () => {
+
+    anime({
+        targets: labelIme,
+        translateY: -35,
+        easing: 'linear',
+        duration: 250
+    });
+})
+
+formIme.addEventListener('blur', () => {
+    if (formIme.value == '') {
+
+        anime({
+            targets: labelIme,
+            translateY: 0,
+            easing: 'linear',
+            duration: 150
+        });
+    }
+    formIme.style.cssText = ''
+})
+
+formEmail.addEventListener('focus', () => {
+
+    anime({
+        targets: labelEmail,
+        translateY: -35,
+        easing: 'linear',
+        duration: 250
+    });
+})
+
+formEmail.addEventListener('blur', () => {
+    if (formEmail.value == '') {
+
+        anime({
+            targets: labelEmail,
+            translateY: 0,
+            easing: 'linear',
+            duration: 150
+        });
+    }
+    formEmail.style.cssText = ''
+})
+
+formPoruka.addEventListener('focus', () => {
+
+    anime({
+        targets: labelPoruka,
+        translateY: -30,
+        easing: 'linear',
+        duration: 250
+    });
+})
+
+formPoruka.addEventListener('blur', () => {
+    if (formPoruka.value == '') {
+
+        anime({
+            targets: labelPoruka,
+            translateY: 0,
+            easing: 'linear',
+            duration: 150
+        });
+    }
+    formPoruka.style.cssText = ''
+})
+
+refres.addEventListener('click', () => {
+    formIme.value = ''
+    formEmail.value = ''
+    formPoruka.value = ''
+    formular.reset();
+    location.reload();
+})
+
+refres1.addEventListener('click', () => {
+    formIme.value = ''
+    formEmail.value = ''
+    formPoruka.value = ''
+    formular.reset();
+    location.reload();
+})
+
+
+
+
+// anime({
+//     targets: document.getElementById(o.tekstId),
+//     opacity: 1,
+//     easing: 'easeInOutQuad',
+//     duration: trajanje
+// });
+
+
 
 /********* MAPA *************/
 
