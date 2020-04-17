@@ -80,7 +80,6 @@ html {
 }
 
 .head {
-
     position: fixed;
     top: 0;
     left: 0;
@@ -514,7 +513,7 @@ html {
     min-height: 600px;
     background-image: linear-gradient(to right bottom, rgba(10, 10, 10, 0.9),
             rgba(10, 10, 10, 0.85)),
-        url(../img/bill-oxford-OXGhu60NwxU-unsplash.jpg);
+        url(../img/clarisse-meyer-jKU2NneZAbI-unsplash.jpg);
     background-attachment: fixed;
     background-position: center;
     background-repeat: no-repeat;
@@ -606,8 +605,32 @@ span {
 }
 
 
+.tim1 {
+    grid-area: tim1;
+}
+
+.tim2 {
+    grid-area: tim2;
+}
+
+.tim3 {
+    grid-area: tim3;
+}
+
+.o-nama1-tekst {
+    grid-area: tekst1;
+}
+
+.o-nama2-tekst {
+    grid-area: tekst2;
+}
+
+.o-nama3-tekst {
+    grid-area: tekst3;
+}
 
 .tim1,
+.tim2,
 .tim3 {
     width: 105%;
     border-radius: 8px;
@@ -619,19 +642,37 @@ span {
     grid-column: 1/2;
 }
 
-#linkedin1,
-#linkedin2 {
-    height: 30px;
-    width: 30px;
+.tim2 {
+    grid-column: 2/3;
+    grid-row: 1/2;
 }
 
-.o-nama1,
+.o-nama1 {
+    display: grid;
+    grid-template-columns: 1fr 4fr;
+    width: 100%;
+    justify-content: space-between;
+    grid-template-areas:
+        "tim1 tekst1";
+}
+
+.o-nama2 {
+    display: grid;
+    grid-template-columns: 4fr 1fr;
+    grid-template-rows: 1fr;
+    width: 100%;
+    justify-content: space-between;
+    grid-template-areas:
+        "tekst2 tim2";
+}
+
 .o-nama3 {
     display: grid;
     grid-template-columns: 1fr 4fr;
     width: 100%;
     justify-content: space-between;
-
+    grid-template-areas:
+        "tim3 tekst3";
 }
 
 
@@ -646,11 +687,12 @@ span {
 }
 
 .o-nama1-tekst,
+.o-nama2-tekst,
 .o-nama3-tekst {
     padding: 0 30px;
 }
 
-
+.o-nama2,
 .o-nama3 {
     margin-top: 70px
 }
@@ -729,6 +771,7 @@ span {
         "tel telefon"
         "www web"
         "em email"
+        "linked linked1"
         "radnoVreme pon"
         "radnoVreme rvPon"
         "radnoVreme sub"
@@ -807,8 +850,19 @@ span {
     padding-right: 20px;
 }
 
-#-email {
+#email {
     grid-area: email;
+}
+
+#linked {
+    grid-area: linked;
+    display: flex;
+    justify-content: right;
+    padding-right: 20px;
+}
+
+#linked1 {
+    grid-area: linked1;
 }
 
 #www {
@@ -1041,6 +1095,7 @@ button:hover {
         z-index: 20;
     }
 
+
     .burger {
         width: 30px;
         height: 2px;
@@ -1103,6 +1158,20 @@ button:hover {
         min-width: 140px;
     }
 
+    .kontakt-container {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 80vh auto auto;
+        grid-template-areas:
+            "mapa1"
+            "kontaktPodaci"
+            "kontaktForma";
+    }
+
+    #kontakt-podaci {
+        width: 100%;
+    }
+
 }
 
 @media screen and (max-width: 680px) {
@@ -1129,10 +1198,36 @@ button:hover {
     }
 
     .o-nama1,
+    .o-nama2,
     .o-nama3 {
         display: grid;
         grid-template-columns: 1fr;
         grid-template-rows: 1fr auto;
+
+    }
+
+    .o-nama1 {
+        grid-template-areas:
+            "tim1"
+            "tekst1";
+    }
+
+    .tim2 {
+        grid-row: 1/2;
+        grid-column: 1/2;
+    }
+
+    .o-nama2 {
+        grid-template-areas:
+            "tim2"
+            "tekst2";
+    }
+
+
+    .o-nama3 {
+        grid-template-areas:
+            "tim3"
+            "tekst3";
     }
 
     .o-nama-container img {
