@@ -604,6 +604,17 @@ span {
     text-align: justify;
 }
 
+.o-nama-container a {
+    font-size: 1.5rem;
+    color: var(--slova-logo);
+    margin-bottom: 20px;
+}
+
+#tim2mail {
+    text-align: right;
+    align-self: flex-end;
+}
+
 
 .tim1 {
     grid-area: tim1;
@@ -679,7 +690,7 @@ span {
 
 .o-nama-container h2 {
     font-size: 2rem;
-    margin-bottom: 20px;
+
 }
 
 .o-nama-container p {
@@ -762,7 +773,7 @@ span {
     align-items: center;
     padding: 20px;
     display: grid;
-    height: 470px;
+    height: 500px;
     grid-template-columns: 1fr 1.4fr;
     grid-template-rows: repeat(1fr, 9);
     grid-template-areas:
@@ -904,7 +915,7 @@ span {
 
 #kontakt-forma {
     margin-top: 30px;
-    height: 470px;
+    height: 500px;
     grid-area: kontaktForma;
     width: 100%;
     display: flex;
@@ -1061,18 +1072,6 @@ button:hover {
 }
 
 
-
-
-
-
-
-
-/*************** 404 *************/
-
-
-
-
-
 /**** RESPONSIVE ****************************************************************/
 
 @media screen and (max-width: 1050px) {
@@ -1223,7 +1222,6 @@ button:hover {
             "tekst2";
     }
 
-
     .o-nama3 {
         grid-template-areas:
             "tim3"
@@ -1233,6 +1231,21 @@ button:hover {
     .o-nama-container img {
         width: 60%;
         justify-self: center;
+    }
+
+    .o-nama-container h2 {
+        margin-top: 20px;
+        text-align: center;
+    }
+
+    .o-nama-container a {
+        text-align: center;
+        font-size: 1.2rem;
+    }
+
+    #tim2mail,
+    #tim1mail {
+        text-align: center;
     }
 
     .sektor-dole h6 {
